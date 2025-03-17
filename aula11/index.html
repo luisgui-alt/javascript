@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+</head>
+<body>
+    Velocidade Permitida da Via: 60km
+    <br> <br>
+
+    <label for="ivelo">Velocidade do carro</label>
+    <input type="number" name="velo" id="ivelo">
+    <input type="button" value="presumir" onclick="presumir()">
+    <div id="pres">
+
+    </div>
+    <script>
+        var velo = document.getElementById('ivelo')
+        function presumir() {
+            var res = document.querySelector('div#pres')
+            var km = Number(velo.value)
+            res.innerHTML = (`Sua velocidade é de ${km}`)
+            if (km < 60) {
+                res.innerHTML += (' Suave viu fi')
+            } else {
+                res.innerHTML += (' Multado papis')
+            }
+        }
+    </script>
+</body>
+</html>
