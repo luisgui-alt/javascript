@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais eventos DOM's</title>
+</head>
+<body>
+    <h1>Matemática réa de soma</h1>
+    <input type="number" name="num1" id="inum1" placeholder="digite um número"><br> <br>
+    <input type="number" name="num2" id="inum2" placeholder="digite mais um número"><br> <br>
+    <input type="button" value="Somar" onclick="somar()"> <br> <br>
+    <div id="res" style="width: 1000px;">
+        Resultado
+    </div>
+
+    <script>
+        function somar() {
+        var num1 = document.getElementById('inum1')
+        var num2 = document.querySelector('input#inum2')
+        var s = document.getElementsByTagName('div') [0]
+        var n1 = Number(num1.value)
+        var n2 = Number(num2.value)
+        var s = n1 + n2 
+        res.innerHTML = `a soma de ${n1} e ${n2} é igual  a <strong>${s}</strong> !!!! UUUUUUOOOOOOUUUUUUUU`
+        }
+    </script>
+</body>
+</html>
