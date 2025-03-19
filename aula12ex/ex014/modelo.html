@@ -15,9 +15,14 @@
             background-color: rgb(76, 106, 240);
             font-family: Arial, Helvetica, sans-serif;
             font-size: 1em;
+            background-color: rgb(196, 196, 15);
         }
 
         section {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
             height: 400px;
             width: 500px;
             background-color: white;
@@ -25,18 +30,21 @@
             border-radius: 20px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
             padding: 10px;
+            font-size: 1.3em;
         }
 
         h1 {
             text-align: center;
             font-size: 2em;
             margin: 15px;
+            color: white;
         }
 
         footer {
             padding: 20px;
             text-align: center;
             font-style: italic;
+            color: white;
         }
 
         p > footer {
@@ -44,17 +52,18 @@
         }
     </style>
 </head>
-<body>
+<body onload="carregar()">
     <header>
         <h1>Hora do Dia</h1>
     </header>
 
         <section>
-            <div>
-                testatetswe
+            <div id="msg">
+                
             </div>
-            <div>
-                testartem
+            <br>
+            <div id="foto">
+                <img src="imagens/dia.png" alt="foto" id="imagem">
             </div>
         </section>
 
