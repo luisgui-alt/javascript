@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAAAAAHHHGGGGGG</title>
+</head>
+<body>
+    <h1>Brasileiro ou estrangeiro?</h1>
+    <label for="ipais">País de Nascimento: </label>
+    <input type="text" name="pais" id="ipais">
+    <input type="button" value="presumir">
+    <br> <br>
+    <div id="res">
+        
+    </div>
+    <script>
+        var botao = document.getElementsByTagName('input') [1]
+        botao.addEventListener('click', clicar)
+
+        function clicar() {
+            var pais = document.getElementById('ipais').value   
+            var res = document.getElementById('res')
+            res.innerHTML = `País de nascimento é ${pais}`
+            if (pais == 'Brasil' || pais == 'brasil' ) {
+                res.innerHTML += '. Logo, você é brasileiro!'
+            } else {
+                res.innerHTML += '. Logo, você é estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
