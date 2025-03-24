@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    cpf: <input type="text" name="cpf" id="cpf" maxlength="11">
+    <input type="button" value="AAAhHGGG" onclick="mostrar()">
+    <div id="icpf"></div>
+
+    <script>
+        function mostrar(e) {
+            var cpf = document.getElementsByTagName('input')[0].value
+            if (cpf >= 9) {
+                cpf = cpf.replace(/^(\d{3})(\d{3})(\d{3})(\d{0,2})$/, "$1.$2.$3-$4")
+            } else if (cpf >= 6) {
+                cpf = cpf.replace(/^(\d{3})(\d{3})(\d{0,3})$/, "$1.$2.$3")
+            } else if (cpf >= 3) {
+                cpf = cpf.replace(/^(\d{3})(\d{0,3})$/, "$1.$2")
+            }
+
+            target.value = cpf;
+            document.getElementById('icpf').textContent = cpf
+
+        }
+    </script>
+</body>
+</html>
