@@ -6,13 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true  " alt="a" onmouseover="mudar()">
+    <img src="https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true" alt="a" onmouseover="mudar()" onmouseout="redefinir()">
     
     <script>
         function mudar() {
             var img = document.getElementsByTagName('img')[0]
             img.src = 'https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada-on.jpg?raw=true'
             
+        }
+
+        function redefinir() {
+            var img = document.getElementsByTagName('img')[0]
+            img.src = "https://github.com/gabrieldarezzo/helpjs-ravi/blob/master/images/lampada.jpg?raw=true"
         }
     </script>
 </body>
